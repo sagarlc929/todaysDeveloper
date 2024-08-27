@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    background: linear-gradient(#e66465, #9198e5);
+    border-radius: 8;
+   border-radius: 0 0 8px 8px;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.profile-header {
+    max-width: 600px;
+    margin: 0 auto;
+}
+main{
+    padding:1rem;
+}
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit:cover;
+}
+
+h1, h2 {
+    margin: 10px 0;
+}
+
+.about, .projects, .skills, .contact {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+.about > p {
+text-align: justify;
+}
+
+.contact-links-collection{
+    display:flex;
+    gap:2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+.contact-links {
+    display :flex;
+  font-size: 18px; /* Font size for links */
+  color: #000; /* Blue color for links */
+  text-decoration: none; /* Remove underline */
+  border-radius: 4px; /* Rounded corners for the links */
+  transition: color 0.3s, transform 0.3s; /* Smooth transition for color and transform */
+}
+.contact-links:hover {
+  color: dodgerblue; /* Darker blue on hover */
+  transform: translateY(-5px); /* Move the link up by 5px */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+}
+
+
