@@ -1,0 +1,266 @@
+[summer@archlinux personalProfile](main)$ pwd
+/home/summer/demo/my/personalProfile
+[summer@archlinux personalProfile](main)$ ls
+index.html  README.md
+[summer@archlinux personalProfile](main)$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[summer@archlinux personalProfile](main)$ git log
+commit ce39ac97c98e797f534bc500a693c164ea4e8199 (HEAD -> main, origin/main)
+Author: sagarlc929 <sagarlamichhane929@gmail.com>
+Date:   Fri Aug 30 08:53:28 2024 +0545
+
+    created index.html
+
+commit d22267d4d4a84b5123786c986768375bd2a9b112
+Author: sagarlc929 <sagarlamichhane929@gmail.com>
+Date:   Fri Aug 30 08:51:23 2024 +0545
+
+    first commit
+[summer@archlinux personalProfile](main)$ git reset --hard d22267d4d4a84b5123786c986768375bd2a9b112
+HEAD is now at d22267d first commit
+[summer@archlinux personalProfile](main)$ git log
+commit d22267d4d4a84b5123786c986768375bd2a9b112 (HEAD -> main)
+Author: sagarlc929 <sagarlamichhane929@gmail.com>
+Date:   Fri Aug 30 08:51:23 2024 +0545
+
+    first commit
+[summer@archlinux personalProfile](main)$ git branch
+* main
+[summer@archlinux personalProfile](main)$ git branch main
+fatal: a branch named 'main' already exists
+[summer@archlinux personalProfile](main)$ git branch contents
+[summer@archlinux personalProfile](main)$ git brnch
+git: 'brnch' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+[summer@archlinux personalProfile](main)$ git branch
+  contents
+* main
+[summer@archlinux personalProfile](main)$ git branch footer
+[summer@archlinux personalProfile](main)$ git branch
+  contents
+  footer
+* main
+[summer@archlinux personalProfile](main)$ git checkout contents
+Switched to branch 'contents'
+[summer@archlinux personalProfile](contents)$ git branch
+* contents
+  footer
+  main
+[summer@archlinux personalProfile](contents)$ git checkout branch main
+error: pathspec 'branch' did not match any file(s) known to git
+error: pathspec 'main' did not match any file(s) known to git
+[summer@archlinux personalProfile](contents)$ git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+[summer@archlinux personalProfile](main)$ git add index.html 
+[summer@archlinux personalProfile](main)$ git commit - " added html file with header"
+error: pathspec '-' did not match any file(s) known to git
+error: pathspec ' added html file with header' did not match any file(s) known to git
+[summer@archlinux personalProfile](main)$ git commit -m " added html fil
+e with header"
+[main b6f06ca]  added html file with header
+ 1 file changed, 24 insertions(+)
+ create mode 100644 index.html
+[summer@archlinux personalProfile](main)$ git push
+To github.com:sagarlc929/personalProfile.github.io.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:sagarlc929/personalProfile.github.io.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[summer@archlinux personalProfile](main)$ git pull
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint:
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint:
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+[summer@archlinux personalProfile](main)$ git push
+To github.com:sagarlc929/personalProfile.github.io.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:sagarlc929/personalProfile.github.io.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[summer@archlinux personalProfile](main)$ git push origin/main
+fatal: 'origin/main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[summer@archlinux personalProfile](main)$ git push origin main
+To github.com:sagarlc929/personalProfile.github.io.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:sagarlc929/personalProfile.github.io.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[summer@archlinux personalProfile](main)$ git pull
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint:
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint:
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+[summer@archlinux personalProfile](main)$ git pull origin main --no-rebase
+From github.com:sagarlc929/personalProfile.github.io
+ * branch            main       -> FETCH_HEAD
+Auto-merging index.html
+CONFLICT (add/add): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+[summer@archlinux personalProfile](main)$ ^[[200~git push origin main
+^[[201~bash: $'\E[200~git': command not found
+[summer@archlinux personalProfile](main)$ t push origin main
+^[[201~bash: t: command not found
+[summer@archlinux personalProfile](main)$ t push origin main
+^[[201~bash: t: command not found
+[summer@archlinux personalProfile](main)$ t push origin main^[
+^[[201~bash: t: command not found
+[summer@archlinux personalProfile](main)$ git push origin main
+To github.com:sagarlc929/personalProfile.github.io.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:sagarlc929/personalProfile.github.io.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[summer@archlinux personalProfile](main)$ git pull
+error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+[summer@archlinux personalProfile](main)$ git pull origin main --rebase
+error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+[summer@archlinux personalProfile](main)$ git commit -m "conflit resolved"
+U       index.html
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+[summer@archlinux personalProfile](main)$ git add .
+[summer@archlinux personalProfile](main)$ git commit -m "conflit resolved"
+[main 6448a78] conflit resolved
+[summer@archlinux personalProfile](main)$ git push
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 996 bytes | 996.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:sagarlc929/personalProfile.github.io.git
+   ce39ac9..6448a78  main -> main
+[summer@archlinux personalProfile](main)$ git checkout footer
+Switched to branch 'footer'
+[summer@archlinux personalProfile](footer)$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+[summer@archlinux personalProfile](main)$ git branch
+  contents
+  footer
+* main
+[summer@archlinux personalProfile](main)$ git branch -D contents
+Deleted branch contents (was d22267d).
+[summer@archlinux personalProfile](main)$ git brach -D footer
+git: 'brach' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+[summer@archlinux personalProfile](main)$ git branch -D footer
+Deleted branch footer (was d22267d).
+[summer@archlinux personalProfile](main)$ git branch
+* main
+[summer@archlinux personalProfile](main)$ git branch  mainFooter
+[summer@archlinux personalProfile](main)$ git checkout mainFooter
+Switched to branch 'mainFooter'
+[summer@archlinux personalProfile](mainFooter)$ git add .
+[summer@archlinux personalProfile](mainFooter)$ git commit -m "added main contents"
+[mainFooter fe42617] added main contents
+ 1 file changed, 47 insertions(+), 1 deletion(-)
+[summer@archlinux personalProfile](mainFooter)$ git push
+fatal: The current branch mainFooter has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin mainFooter
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+[summer@archlinux personalProfile](mainFooter)$ git push --set-upstream origin mainFooter
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.40 KiB | 1.40 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'mainFooter' on GitHub by visiting:
+remote:      https://github.com/sagarlc929/personalProfile.github.io/pull/new/mainFooter
+remote: 
+To github.com:sagarlc929/personalProfile.github.io.git
+ * [new branch]      mainFooter -> mainFooter
+branch 'mainFooter' set up to track 'origin/mainFooter'.
+[summer@archlinux personalProfile](mainFooter)$ git add .
+[summer@archlinux personalProfile](mainFooter)$ git commit -m "added footer content"
+[mainFooter 8ebc35c] added footer content
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+[summer@archlinux personalProfile](mainFooter)$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 499 bytes | 499.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:sagarlc929/personalProfile.github.io.git
+   fe42617..8ebc35c  mainFooter -> mainFooter
+[summer@archlinux personalProfile](mainFooter)$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+[summer@archlinux personalProfile](main)$ git branch
+* main
+  mainFooter
+[summer@archlinux personalProfile](main)$ git merge mainFooter
+Updating 6448a78..8ebc35c
+Fast-forward
+ index.html | 52 ++++++++++++++++++++++++++++++++++++++++++++++++++--
+ 1 file changed, 50 insertions(+), 2 deletions(-)
+[summer@archlinux personalProfile](main)$ git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:sagarlc929/personalProfile.github.io.git
+   6448a78..8ebc35c  main -> main
+[summer@archlinux personalProfile](main)$ git add .
+[summer@archlinux personalProfile](main)$ git commit -m "merged form mainFooter"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+[summer@archlinux personalProfile](main)$ git push
+Everything up-to-date
+[summer@archlinux personalProfile](main)$ 
