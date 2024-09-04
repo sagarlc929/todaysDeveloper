@@ -8,7 +8,7 @@ const people = [
     },
     {
         "name": "Rishav Maharjan",
-        "description": `"Optimistic lead to strength, possessive lead to weakness."<br>~unknown`,
+        "description": `IT services professional specializing in hardware, networking, security camera sales, and consulting.`,
         "profession": "IT Solutions Specialist",
         "image": "./assets/images/rishav-maharjan.jpg",
         "learnMore":"https://sagarlc929.github.io/profile-rishave.github.io/"
