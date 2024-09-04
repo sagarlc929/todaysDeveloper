@@ -7,6 +7,14 @@ const people = [
         "learnMore":"https://personal-portfolio-summer-haze.vercel.app/"
     },
     {
+        "name": "Rishav Maharjan",
+        "description": `"Optimistic lead to strength, possessive lead to weakness."<br>~unknown`,
+        "profession": "IT Solutions Specialist",
+        "image": "./assets/images/rishav-maharjan.jpg",
+        "learnMore":"https://sagarlc929.github.io/profile-rishave.github.io/"
+    },
+
+    {
         "name": "Jane Smith adlskfajldskfalksd",
         "description": " weakness",
         "profession": "Graphic Designer",

@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Create the anchor element
         const anchor = document.createElement('a');
+        anchor.target = '_blank';
         anchor.href = person.learnMore;
         anchor.className = 'card-link'; // Add a class if needed for styling
 
