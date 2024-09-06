@@ -87,7 +87,7 @@ body {
     100% { background-position: 0% 0%; }
 }
 
-.profession {
+.card:hover .profession {
     font-size: 18px;
     font-weight: bold;
     background: linear-gradient(90deg, #d32f2f, #f57c00, #fbc02d, #388e3c, #1976d2, #6a1b9a, #ab47bc);
@@ -102,6 +102,19 @@ body {
 
 }
 
+.profession {
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #d32f2f, #f57c00, #fbc02d, #388e3c, #1976d2, #6a1b9a, #ab47bc);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text; /* For WebKit browsers */
+    color: transparent;
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    overflow: hidden; /* Hide overflowed text */
+    text-overflow: ellipsis; /* Show ellipsis when text overflows */
+
+}
 
 
 .learn-more {
